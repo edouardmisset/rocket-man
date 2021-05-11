@@ -1,6 +1,7 @@
 import './App.css';
 import Particles from 'react-particles-js';
 import Ship from './components/Ship';
+import { useState } from 'react';
 
 const particlesOptions = {
   particles: {
@@ -48,10 +49,19 @@ const particlesOptions = {
 };
 
 function App() {
+  const [ship, setShip] = useState({
+    position: {
+      x: 0,
+      y: 0,
+    },
+    angle: 0
+
+  })
+
   return (
     <div className='App'>
       <Particles params={particlesOptions} className='particles' />
-      <Ship />
+      <Ship ship={ship} setShip={setShip} />
     </div>
   );
 }

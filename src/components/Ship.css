@@ -1,4 +1,5 @@
-.ship {
+.rocket {
   width: 5em;
   height: auto;
+  position: absolute;
 }
