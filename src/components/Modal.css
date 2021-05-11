@@ -8,7 +8,7 @@
   right: 0;
   top:25vh;
   
-  z-index: -100;
+  
   margin-left: auto;
   margin-right: auto;
   width: 400px;
@@ -19,4 +19,11 @@
   color: hsla(36, 50%, 95%, 0.9);
   border-radius: 1em;
   padding: 1em;
+}
+
+.realImage{
+  display:flex;
+  position:relative;
+  padding-left: 200px;
+
 }

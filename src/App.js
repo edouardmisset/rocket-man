@@ -94,8 +94,8 @@ export default function App() {
         "Mars is the fourth planet in increasing order of distance from the Sun and the second in increasing order of size and mass.",
         cartoonImage: marsCartoon,
         position:{
-          x:500,
-          y:45,
+          x:630,
+          y:295,
         },
         size:100,
       },
