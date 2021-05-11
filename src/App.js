@@ -53,7 +53,7 @@ const particlesOptions = {
 
 function App() {
   // All the informations of the list of the celestial bodies will be stored in an array of objects : celestialBodyInfoList
-  // We need the following informations / keys : cartoonImage, realImage, name, description, position
+  // We need the following informations / keys : cartoonImage, realImage, name, description, position, size
   // position is an object containing x and y
   const [celestialBodyInfoList, setCelestialBodyInfoList] = useState(null);
 
@@ -70,6 +70,7 @@ function App() {
           x: 10,
           y: 20,
         },
+        size: 100,
       },
     ]);
     // return () => {

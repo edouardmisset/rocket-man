@@ -2,7 +2,14 @@
 
 export default function CelestialBody(celestialBodyInfo) {
   const {
-    celestialBodyInfo: { cartoonImage, realImage, name, description, position },
+    celestialBodyInfo: {
+      cartoonImage,
+      realImage,
+      name,
+      description,
+      position,
+      size,
+    },
   } = celestialBodyInfo;
   // const [hasRocketLanded, setHasRocketLanded] = useState(false);
 
@@ -17,7 +24,11 @@ export default function CelestialBody(celestialBodyInfo) {
         bottom: `${position.y}px`,
       }}
     >
-      <img src={cartoonImage} alt={name} />
+      <img
+        src={cartoonImage}
+        alt={name}
+        style={{ maxHeight: size, maxWidth: size }}
+      />
     </div>
   );
 }
