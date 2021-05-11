@@ -1,7 +1,8 @@
-// import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-export default function CelestialBody(celestialBodyInfo) {
+export default function CelestialBody(props) {
   const {
+    ship,
     celestialBodyInfo: {
       cartoonImage,
       realImage,
@@ -10,10 +11,26 @@ export default function CelestialBody(celestialBodyInfo) {
       position,
       size,
     },
-  } = celestialBodyInfo;
-  // const [hasRocketLanded, setHasRocketLanded] = useState(false);
+  } = props;
+  const [hasRocketLanded, setHasRocketLanded] = useState(false);
 
-  console.log(name);
+  useEffect(() => {
+    setHasRocketLanded(
+      ship.position.x >= position.x + size &&
+        ship.position.x <= position.x &&
+        ship.position.y >= position.y + size &&
+        ship.position.y <= position.y
+    );
+  }, [position.x, position.y, ship, size]);
+
+  console.log(hasRocketLanded);
+
+  useEffect(() => {
+    // Open modal
+    return () => {
+      // Close modal
+    }
+  }, [hasRocketLanded]);
 
   if (!position) return 'Coming...';
   return (

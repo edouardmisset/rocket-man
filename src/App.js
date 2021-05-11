@@ -60,11 +60,12 @@ const particlesOptions = {
 };
 
 export default function App() {
+  const [ship, setShip] = useState({ position: { x: 350, y: 300 }, angle: 90 });
+
   // All the informations of the list of the celestial bodies will be stored in an array of objects : celestialBodyInfoList
   // We need the following informations / keys : cartoonImage, realImage, name, description, position, size
   // position is an object containing x and y
   const [celestialBodyInfoList, setCelestialBodyInfoList] = useState(null);
-
   useEffect(() => {
     setCelestialBodyInfoList([
       {
@@ -88,11 +89,13 @@ export default function App() {
     <div className='App'>
       <Particles params={particlesOptions} className='particles' />
       {celestialBodyInfoList.map(celestialBodyInfo => (
-        <div key={celestialBodyInfo.name}>
-          <CelestialBody celestialBodyInfo={celestialBodyInfo} />
-        </div>
+        <CelestialBody
+          key={celestialBodyInfo.name}
+          ship={ship}
+          celestialBodyInfo={celestialBodyInfo}
+        />
       ))}
-      <Ship />
+      <Ship ship={ship} />
     </div>
   );
 }
