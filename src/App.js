@@ -51,12 +51,11 @@ const particlesOptions = {
 function App() {
   const [ship, setShip] = useState({
     position: {
-      x: 0,
-      y: 0,
+      x: 250,
+      y: 300,
     },
-    angle: 0
-
-  })
+    angle: 0,
+  });
 
   return (
     <div className='App'>
