@@ -1,10 +1,12 @@
-import './App.css';
-import Particles from 'react-particles-js';
-import { useEffect, useState } from 'react';
-import CelestialBody from './components/CelestialBody';
-import Ship from './components/Ship';
+import "./App.css";
+import Particles from "react-particles-js";
+import { useEffect, useState } from "react";
+import CelestialBody from "./components/CelestialBody";
+import InfosCelestial from "./components/InfosCelestial";
+import Ship from "./components/Ship";
+
 // Import assests
-import cartoonImage from './assets/planet.svg';
+import cartoonImage from "./assets/planet.svg";
 
 const particlesOptions = {
   particles: {
@@ -21,7 +23,7 @@ const particlesOptions = {
       opacity: 0.1,
     },
     move: {
-      direction: 'right',
+      direction: "right",
       speed: 0.2,
     },
     size: {
@@ -39,7 +41,7 @@ const particlesOptions = {
     events: {
       onclick: {
         enable: true,
-        mode: 'push',
+        mode: "push",
       },
     },
     modes: {
@@ -60,12 +62,12 @@ function App() {
   useEffect(() => {
     setCelestialBodyInfoList([
       {
-        name: 'Moon',
+        name: "Moon",
         description:
           "The Moon is Earth's only natural satellite. At about one-quarter the diameter of Earth (comparable to the width of Australia),[13] it is the largest natural satellite in the Solar System relative to the size of its planet,[f] and the fifth largest satellite in the Solar System overall (larger than any dwarf planet).",
         cartoonImage: cartoonImage,
         realImage:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Supermoon_Nov-14-2016-minneapolis.jpg/1200px-Supermoon_Nov-14-2016-minneapolis.jpg',
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Supermoon_Nov-14-2016-minneapolis.jpg/1200px-Supermoon_Nov-14-2016-minneapolis.jpg",
         position: {
           x: 10,
           y: 20,
@@ -78,16 +80,17 @@ function App() {
     // }
   }, []);
 
-  if (!celestialBodyInfoList) return 'Loading...';
+  if (!celestialBodyInfoList) return "Loading...";
   return (
-    <div className='App'>
-      <Particles params={particlesOptions} className='particles' />
-      {celestialBodyInfoList.map(celestialBodyInfo => (
+    <div className="App">
+      <Particles params={particlesOptions} className="particles" />
+      {celestialBodyInfoList.map((celestialBodyInfo) => (
         <div key={celestialBodyInfo.name}>
           <CelestialBody celestialBodyInfo={celestialBodyInfo} />
         </div>
       ))}
       <Ship />
+      <InfosCelestial />
     </div>
   );
 }

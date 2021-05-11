@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react-particles-js": "^3.4.1",
+    "axios": "^0.21.1",
+    "dotenv": "^9.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-particles-js": "^3.4.1",
     "react-scripts": "4.0.3"
   },
   "scripts": {
