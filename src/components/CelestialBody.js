@@ -15,19 +15,33 @@ export default function CelestialBody(props) {
   } = props;
   const [hasRocketLanded, setHasRocketLanded] = useState(false);
 
+  const cBXMin = position.x;
+  const cBXMax = position.x + size;
+  const cBYMin = position.y;
+  const cBYMax = position.y + size;
+  const rocket = document.querySelector('.rocket');
+  const rocketHeight = rocket.offsetHeight;
+  const rocketWidth = rocket.offsetWidth;
+
   useEffect(() => {
+    const shipX = ship.position.x + rocketWidth / 2;
+    const shipY = ship.position.y + rocketHeight / 2;
     setHasRocketLanded(
-      ship.position.x >= position.x + size &&
-        ship.position.x <= position.x &&
-        ship.position.y >= position.y + size &&
-        ship.position.y <= position.y
+      cBXMin <= shipX && shipX <= cBXMax && cBYMin <= shipY && shipY <= cBYMax
     );
-
-    console.log(`Ship: x = ${ship.position.x}, y = ${ship.position.y}`);
-    console.log(`Celestial Body: x = ${position.x}, y = ${position.y}`);
-  }, [position.x, position.y, ship, size]);
-
-  console.log(`Ship has landed: ${hasRocketLanded}`);
+  }, [
+    cBXMax,
+    cBXMin,
+    cBYMax,
+    cBYMin,
+    position.x,
+    position.y,
+    rocketHeight,
+    rocketWidth,
+    ship.position.x,
+    ship.position.y,
+    size,
+  ]);
 
   if (!position) return 'Coming...';
   return (
