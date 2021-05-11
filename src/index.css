@@ -8,5 +8,5 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background: linear-gradient(135deg, hsl(212, 62%, 12%), hsl(212, 66%, 7%));
+  background: linear-gradient(150deg, hsl(212, 62%, 12%), hsl(212, 66%, 7%));
 }
