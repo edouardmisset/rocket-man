@@ -1,18 +1,20 @@
-import './App.css';
-import Particles from 'react-particles-js';
-import Ship from './components/Ship';
-import { useEffect, useState } from 'react';
-import CelestialBody from './components/CelestialBody';
+import "./App.css";
+import Particles from "react-particles-js";
+import { useEffect, useState } from "react";
+import CelestialBody from "./components/CelestialBody";
+import InfosCelestial from "./components/InfosCelestial";
+import Ship from "./components/Ship";
+
 // Import assests
-import earthCartoon from './assets/terre-cartoon.svg';
-import galaxyCartoon from './assets/galaxy-cartoon.svg';
-import issCartoon from './assets/iss-cartoon.svg';
-import jupiterCartoon from './assets/jupiter-cartoon.svg';
-import marsCartoon from './assets/mars-cartoon.svg';
-import saturnCartoon from './assets/saturne-cartoon.svg';
-import sunCartoon from './assets/soleil-cartoon.svg';
-import deathStarCartoon from './assets/etoile-de-la-mort-cartoon.svg';
-import eT from './assets/ET.svg';
+import earthCartoon from "./assets/terre-cartoon.svg";
+import galaxyCartoon from "./assets/galaxy-cartoon.svg";
+import issCartoon from "./assets/iss-cartoon.svg";
+import jupiterCartoon from "./assets/jupiter-cartoon.svg";
+import marsCartoon from "./assets/mars-cartoon.svg";
+import saturnCartoon from "./assets/saturne-cartoon.svg";
+import sunCartoon from "./assets/soleil-cartoon.svg";
+import deathStarCartoon from "./assets/etoile-de-la-mort-cartoon.svg";
+import eT from "./assets/ET.svg";
 
 const particlesOptions = {
   particles: {
@@ -29,7 +31,7 @@ const particlesOptions = {
       opacity: 0.1,
     },
     move: {
-      direction: 'right',
+      direction: "right",
       speed: 0.2,
     },
     size: {
@@ -47,7 +49,7 @@ const particlesOptions = {
     events: {
       onclick: {
         enable: true,
-        mode: 'push',
+        mode: "push",
       },
     },
     modes: {
@@ -75,12 +77,12 @@ export default function App() {
   useEffect(() => {
     setCelestialBodyInfoList([
       {
-        name: 'Earth',
+        name: "Earth",
         description:
           "The Moon is Earth's only natural satellite. At about one-quarter the diameter of Earth (comparable to the width of Australia),[13] it is the largest natural satellite in the Solar System relative to the size of its planet,[f] and the fifth largest satellite in the Solar System overall (larger than any dwarf planet).",
         cartoonImage: earthCartoon,
         realImage:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Supermoon_Nov-14-2016-minneapolis.jpg/1200px-Supermoon_Nov-14-2016-minneapolis.jpg',
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Supermoon_Nov-14-2016-minneapolis.jpg/1200px-Supermoon_Nov-14-2016-minneapolis.jpg",
         position: {
           x: 150,
           y: 200,
@@ -90,11 +92,11 @@ export default function App() {
     ]);
   }, []);
 
-  if (!celestialBodyInfoList) return 'Loading...';
+  if (!celestialBodyInfoList) return "Loading...";
   return (
-    <div className='App'>
-      <Particles params={particlesOptions} className='particles' />
-      {celestialBodyInfoList.map(celestialBodyInfo => (
+    <div className="App">
+      <Particles params={particlesOptions} className="particles" />
+      {celestialBodyInfoList.map((celestialBodyInfo) => (
         <CelestialBody
           key={celestialBodyInfo.name}
           ship={ship}
@@ -103,15 +105,15 @@ export default function App() {
       ))}
       <Ship ship={ship} setShip={setShip} />
       <iframe
-        title='Rocket Man'
-        src='https://open.spotify.com/embed/track/3gdewACMIVMEWVbyb8O9sY'
-        width='300'
-        height='80'
-        frameborder='0'
-        allowtransparency='true'
-        allow='encrypted-media'
+        title="Rocket Man"
+        src="https://open.spotify.com/embed/track/3gdewACMIVMEWVbyb8O9sY"
+        width="300"
+        height="80"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media"
         style={{
-          position: 'absolute',
+          position: "absolute",
           bottom: 0,
           right: 0,
         }}
