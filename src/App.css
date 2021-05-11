@@ -1,4 +1,12 @@
-button {
+.button {
+
     display:flex;
+    justify-content: center;
+    align-content: center;
     align-items: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: none;
+    background-color: black;
 }

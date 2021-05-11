@@ -2,11 +2,11 @@ import React from 'react';
 import './Modal.css'
 
 
-const Modal =({revele, cache}) => revele ? (
+const Modal =({revele}) => revele ? (
 
     
         <div className="modale">
-            <button onClick={cache}>X</button>
+            
             <h1>Planet name</h1>
             
             <p>diameter:</p>

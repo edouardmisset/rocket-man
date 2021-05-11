@@ -12,7 +12,7 @@ function App() {
   return (
   <div className='App'>
     
-      <button className='button' onClick={toggle}>ouvrir la modal</button>
+      <button className='button' onClick={toggle}></button>
       <Modal
         revele={revele}
         cache={toggle}
