@@ -60,7 +60,13 @@ const particlesOptions = {
 };
 
 export default function App() {
-  const [ship, setShip] = useState({ position: { x: 350, y: 300 }, angle: 90 });
+  const [ship, setShip] = useState({
+    position: {
+      x: 250,
+      y: 300,
+    },
+    angle: 0,
+  });
 
   // All the informations of the list of the celestial bodies will be stored in an array of objects : celestialBodyInfoList
   // We need the following informations / keys : cartoonImage, realImage, name, description, position, size
@@ -95,7 +101,7 @@ export default function App() {
           celestialBodyInfo={celestialBodyInfo}
         />
       ))}
-      <Ship ship={ship} />
+      <Ship ship={ship} setShip={setShip} />
     </div>
   );
 }
