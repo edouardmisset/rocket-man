@@ -1,5 +1,6 @@
 .App {
   min-height: 100vh;
+  overflow: none;
 }
 
 .particles {
@@ -12,7 +13,9 @@
   /* z-index: -1; */
 }
 
-.button {
+/* Dead code ? */
+
+/* .button {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -22,4 +25,4 @@
   border-radius: 50%;
   border: none;
   background-color: black;
-}
+} */
