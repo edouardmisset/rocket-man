@@ -88,6 +88,37 @@ export default function App() {
         },
         size: 100,
       },
+      {
+        name:'mars',
+        description:
+        "Mars is the fourth planet in increasing order of distance from the Sun and the second in increasing order of size and mass.",
+        cartoonImage: marsCartoon,
+        position:{
+          x:500,
+          y:45,
+        },
+        size:100,
+      },
+      {
+      name:'Death star',
+      description:"The Death Stars are two spherically shaped, small moon-sized movable sidereal space stations featured in the Star Wars saga.",
+      cartoonImage: deathStarCartoon,
+      position:{
+        x:900,
+        y:700,
+      },
+      size:180,
+      },
+      {
+        name:'Sun',
+        description:"The Sun is the star of the Solar System. In the astronomical classification, it is a yellow dwarf-type star with a mass of approximately 1.989 1 × 1030 kg, composed of hydrogen (75% of the mass or 92% of the volume) and helium (25% by mass or 8% by volume) 10.",
+        cartoonImage: sunCartoon,
+        position:{
+          x:60,
+          y:970,
+        },
+        size:380,
+      }
     ]);
   }, []);
 
@@ -96,7 +127,7 @@ export default function App() {
     <div className='App'>
       <Particles params={particlesOptions} className='particles' />
       {celestialBodyInfoList.map(celestialBodyInfo => (
-        <div key={celestialBodyInfo.name}>
+        <div className='CelestialBody' key={celestialBodyInfo.name}>
           <CelestialBody celestialBodyInfo={celestialBodyInfo} />
         </div>
       ))}
