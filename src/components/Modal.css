@@ -1,0 +1,18 @@
+.modale {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  /* Center on the page */
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  max-height: 500px;
+  overflow: auto;
+
+  background-color: rgba(18, 10, 12, 0.9);
+  color: hsla(36, 50%, 95%, 0.9);
+  border-radius: 1em;
+  padding: 1em;
+}

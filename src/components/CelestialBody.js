@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Modal from './Modal';
 
 export default function CelestialBody(props) {
   const {
@@ -41,6 +42,15 @@ export default function CelestialBody(props) {
         src={cartoonImage}
         alt={name}
         style={{ maxHeight: size, maxWidth: size }}
+        onClick={() => {
+          setHasRocketLanded(!hasRocketLanded);
+        }}
+      />
+      <Modal
+        hasRocketLanded={hasRocketLanded}
+        description={description}
+        name={name}
+        realImage={realImage}
       />
     </div>
   );
