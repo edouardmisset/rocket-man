@@ -2,6 +2,7 @@ import './App.css';
 import Particles from 'react-particles-js';
 import { useEffect, useState } from 'react';
 import CelestialBody from './components/CelestialBody';
+import Ship from './components/Ship';
 // Import assests
 import cartoonImage from './assets/planet.svg';
 
@@ -85,6 +86,7 @@ function App() {
           <CelestialBody celestialBodyInfo={celestialBodyInfo} />
         </div>
       ))}
+      <Ship />
     </div>
   );
 }
