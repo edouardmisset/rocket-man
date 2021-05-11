@@ -118,7 +118,58 @@ export default function App() {
           y:970,
         },
         size:380,
+      },
+      {
+        name: 'ISS',
+        description:"The International Space Station, or ISS, is a space station placed in low Earth orbit, permanently manned by an international crew dedicated to scientific research in the space environment. ",
+        cartoonImage: issCartoon,
+        position:{
+          x:180,
+          y:290,
+        },
+        size:80,
+      },
+      {
+        name:'Galaxy',
+        description:"A galaxy is an assemblage of stars, gas, dust, void, and perhaps mostly dark matter, sometimes containing a supermassive black hole at its center. ",
+        cartoonImage: galaxyCartoon,
+        position:{
+          x:1642,
+          y:856,
+        },
+        size:300,
+      },
+      {
+        name:"Jupiter",
+        description:"Jupiter is a giant gas planet. It is the largest planet in the Solar System, larger and more massive than all the other planets combined, and the fifth planet by its distance from the Sun. ",
+        cartoonImage:jupiterCartoon,
+        position:{
+          x:1520,
+          y:356,
+        },
+        size:250,
+      },
+      {
+        name:"Saturne",
+        description:"Saturn is the sixth planet in the Solar System in order of distance from the Sun, and the second largest in size and mass after Jupiter, which is like it a giant gas planet. ",
+        cartoonImage: saturnCartoon,
+        position:{
+          x:1853,
+          y:158,
+        },
+        size:250,
+      },
+      {
+        name:"E.T",
+        description: "E.T., the Alien is an American science fiction film directed by Steven Spielberg and released in 1982. ",
+        cartoonImage: eT,
+        position:{
+          x:563,
+          y:750,
+        },
+        size:80,
       }
+
     ]);
   }, []);
 
