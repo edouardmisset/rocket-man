@@ -1,13 +1,13 @@
 import {useState} from 'react';
 
 const LogiqueModal = () => {
-    const [open, closed] = useState(false);
+    const [revele, changeRevele] = useState(false);
 
     function toggle(){
-        closed(!open)
+        changeRevele(!revele)
     }
     return {
-        open,
+        revele,
         toggle
     }
 

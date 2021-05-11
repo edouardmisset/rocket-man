@@ -1,15 +1,21 @@
-import React, { Component } from 'react';
-import { useState } from 'react';
+import React from 'react';
+import './Modal.css'
 
-const Modal =({open,close}) => open ? (
 
-    <React.fragment>
-        <div className="overlay">
-            <p>voici la modal info</p>
+const Modal =({revele, cache}) => revele ? (
+
+    
+        <div className="modale">
+            <button onClick={cache}>X</button>
+            <h1>Planet name</h1>
+            
+            <p>diameter:</p>
+            <p>population:</p>
+            <p>position:</p>
         </div>
 
     
-    </React.fragment>
+    
 ) : null;
 
 export default Modal

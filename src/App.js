@@ -6,20 +6,16 @@ import LogiqueModal from './components/LogiqueModal';
 
 function App() {
 
-  const {open, toggle, closed} = LogiqueModal();
+  const {revele, toggle} = LogiqueModal();
 
   
   return (
   <div className='App'>
     
-      <button 
-      onMouseEnter={toggle}
-      onMouseLeave={toggle}>
-        Popup
-      </button>
+      <button className='button' onClick={toggle}>ouvrir la modal</button>
       <Modal
-        open={open}
-        closed={toggle}
+        revele={revele}
+        cache={toggle}
       />
   </div>
   )
