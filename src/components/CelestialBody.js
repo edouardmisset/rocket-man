@@ -25,13 +25,6 @@ export default function CelestialBody(props) {
 
   console.log(hasRocketLanded);
 
-  useEffect(() => {
-    // Open modal
-    return () => {
-      // Close modal
-    }
-  }, [hasRocketLanded]);
-
   if (!position) return 'Coming...';
   return (
     <div
