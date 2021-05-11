@@ -34,7 +34,6 @@ function Ship({ ship, setShip }) {
         console.log('key pressed');
     }
     const rocket = document.querySelector('.rocket');
-    console.log(angle);
     rocket.style.transform = `rotate(${90 + speed * angle}deg)`;
     rocket.style.top = `${x}px`;
     rocket.style.left = `${y}px`;
