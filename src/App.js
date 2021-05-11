@@ -4,7 +4,15 @@ import { useEffect, useState } from 'react';
 import CelestialBody from './components/CelestialBody';
 import Ship from './components/Ship';
 // Import assests
-import cartoonImage from './assets/planet.svg';
+import earthCartoon from './assets/terre-cartoon.svg';
+import galaxyCartoon from './assets/galaxy-cartoon.svg';
+import issCartoon from './assets/iss-cartoon.svg';
+import jupiterCartoon from './assets/jupiter-cartoon.svg';
+import marsCartoon from './assets/mars-cartoon.svg';
+import saturnCartoon from './assets/saturne-cartoon.svg';
+import sunCartoon from './assets/soleil-cartoon.svg';
+import deathStarCartoon from './assets/etoile-de-la-mort-cartoon.svg';
+import eT from './assets/ET.svg';
 
 const particlesOptions = {
   particles: {
@@ -60,22 +68,19 @@ function App() {
   useEffect(() => {
     setCelestialBodyInfoList([
       {
-        name: 'Moon',
+        name: 'Earth',
         description:
           "The Moon is Earth's only natural satellite. At about one-quarter the diameter of Earth (comparable to the width of Australia),[13] it is the largest natural satellite in the Solar System relative to the size of its planet,[f] and the fifth largest satellite in the Solar System overall (larger than any dwarf planet).",
-        cartoonImage: cartoonImage,
+        cartoonImage: earthCartoon,
         realImage:
           'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Supermoon_Nov-14-2016-minneapolis.jpg/1200px-Supermoon_Nov-14-2016-minneapolis.jpg',
         position: {
-          x: 10,
-          y: 20,
+          x: 150,
+          y: 200,
         },
         size: 100,
       },
     ]);
-    // return () => {
-    //   cleanup
-    // }
   }, []);
 
   if (!celestialBodyInfoList) return 'Loading...';
