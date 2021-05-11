@@ -21,7 +21,7 @@ export default function CelestialBody(celestialBodyInfo) {
       style={{
         position: 'absolute',
         left: `${position.x}px`,
-        bottom: `${position.y}px`,
+        top: `${position.y}px`,
       }}
     >
       <img
