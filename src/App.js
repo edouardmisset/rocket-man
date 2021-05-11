@@ -107,7 +107,7 @@ export default function App() {
         src='https://open.spotify.com/embed/track/3gdewACMIVMEWVbyb8O9sY'
         width='300'
         height='80'
-        frameborder='0'
+        frameBorder='0'
         allowtransparency='true'
         allow='encrypted-media'
         style={{
