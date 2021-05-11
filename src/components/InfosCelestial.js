@@ -63,9 +63,18 @@ function InfosCelestial() {
   return (
     <div>
       <div className="planet-list">
-        {planetList.map((planet) => (
-          <p className="name"> {planet.englishName}</p>
-        ))}
+        {planetList
+          .filter(
+            (planetName) =>
+              planetName.englishName.includes("Moon") ||
+              planetName.englishName.includes("Mars") ||
+              planetName.englishName.includes("Earth") ||
+              planetName.englishName.includes("Jupiter") ||
+              planetName.englishName.includes("Sun")
+          )
+          .map((planet) => (
+            <p className="name"> {planet.englishName}</p>
+          ))}
       </div>
       <div className="celestial-bodies">
         {photosInfos.map((photo) => (
