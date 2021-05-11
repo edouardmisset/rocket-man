@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./InfosCelestials.css";
 import axios from "axios";
+import { createPortal } from "react-dom";
 
 function InfosCelestial() {
   const [planetList, setPlanetList] = useState([]);
@@ -8,7 +9,8 @@ function InfosCelestial() {
   useEffect(() => {
     axios
       .get("https://api.le-systeme-solaire.net/rest/bodies/")
-      .then((response) => setPlanetList(response.data));
+      .then((response) => setPlanetList(response.data.bodies));
+    console.log(planetList);
   }, []);
 
   const photosInfos = [
@@ -61,9 +63,9 @@ function InfosCelestial() {
   return (
     <div>
       <div className="planet-list">
-        {/* {planetList.map((planet) => (
-          <p className="name"> {planet.name}</p>
-       ))}*/}
+        {planetList.map((planet) => (
+          <p className="name"> {planet.englishName}</p>
+        ))}
       </div>
       <div className="celestial-bodies">
         {photosInfos.map((photo) => (
