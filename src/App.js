@@ -102,6 +102,20 @@ export default function App() {
         />
       ))}
       <Ship ship={ship} setShip={setShip} />
+      <iframe
+        title='Rocket Man'
+        src='https://open.spotify.com/embed/track/3gdewACMIVMEWVbyb8O9sY'
+        width='300'
+        height='80'
+        frameborder='0'
+        allowtransparency='true'
+        allow='encrypted-media'
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          right: 0,
+        }}
+      ></iframe>
     </div>
   );
 }
