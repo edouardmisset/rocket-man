@@ -73,7 +73,13 @@ function InfosCelestial() {
               planetName.englishName.includes("Sun")
           )
           .map((planet) => (
-            <p className="name"> {planet.englishName}</p>
+            <div className="planet-info">
+              <h2 className="name"> {planet.englishName}</h2>
+              <p>
+                Gravity : {planet.gravity} m/s2 Radius : {planet.meanRadius} km
+                Density : {planet.density} g/cm3
+              </p>
+            </div>
           ))}
       </div>
       <div className="celestial-bodies">
