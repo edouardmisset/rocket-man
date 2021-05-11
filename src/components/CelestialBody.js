@@ -21,9 +21,12 @@ export default function CelestialBody(props) {
         ship.position.y >= position.y + size &&
         ship.position.y <= position.y
     );
+
+    console.log(`Ship: x = ${ship.position.x}, y = ${ship.position.y}`);
+    console.log(`Celestial Body: x = ${position.x}, y = ${position.y}`);
   }, [position.x, position.y, ship, size]);
 
-  console.log(hasRocketLanded);
+  console.log(`Ship has landed: ${hasRocketLanded}`);
 
   if (!position) return 'Coming...';
   return (
