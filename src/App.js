@@ -59,7 +59,7 @@ const particlesOptions = {
   retina_detect: true,
 };
 
-function App() {
+export default function App() {
   // All the informations of the list of the celestial bodies will be stored in an array of objects : celestialBodyInfoList
   // We need the following informations / keys : cartoonImage, realImage, name, description, position, size
   // position is an object containing x and y
@@ -96,5 +96,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
