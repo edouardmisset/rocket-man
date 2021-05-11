@@ -1,0 +1,6 @@
+.rocket {
+  width: 5em;
+  height: auto;
+  position: absolute;
+  transform: rotate(90deg);
+}

@@ -1,12 +1,25 @@
-.button {
+.App {
+  min-height: 100vh;
+}
 
-    display:flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    border: none;
-    background-color: black;
+.particles {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* Set it to -1 to disable adding new particles */
+  z-index: -1;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: none;
+  background-color: black;
 }

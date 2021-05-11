@@ -1,21 +1,14 @@
-import React from 'react';
-import './Modal.css'
+import './Modal.css';
 
+const Modal = ({ hasRocketLanded, realImage, name, description }) =>
+  hasRocketLanded ? (
+    <div className='modale'>
+      <h2>{name}</h2>
+      <h3>Descrition:</h3>
+      <p>{description}</p>
+      <p>diameter:</p>
+      <p>population:</p>
+    </div>
+  ) : null;
 
-const Modal =({revele}) => revele ? (
-
-    
-        <div className="modale">
-            
-            <h1>Planet name</h1>
-            
-            <p>diameter:</p>
-            <p>population:</p>
-            <p>position:</p>
-        </div>
-
-    
-    
-) : null;
-
-export default Modal
+export default Modal;
