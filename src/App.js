@@ -13,6 +13,7 @@ import saturnCartoon from './assets/saturne-cartoon.svg';
 import sunCartoon from './assets/soleil-cartoon.svg';
 import deathStarCartoon from './assets/etoile-de-la-mort-cartoon.svg';
 import eT from './assets/ET.svg';
+import Title from './components/Title';
 
 const particlesOptions = {
   particles: {
@@ -94,6 +95,7 @@ export default function App() {
   return (
     <div className='App'>
       <Particles params={particlesOptions} className='particles' />
+      <Title />
       {celestialBodyInfoList.map(celestialBodyInfo => (
         <CelestialBody
           key={celestialBodyInfo.name}
@@ -107,7 +109,7 @@ export default function App() {
         src='https://open.spotify.com/embed/track/3gdewACMIVMEWVbyb8O9sY'
         width='300'
         height='80'
-        frameborder='0'
+        frameBorder='0'
         allowtransparency='true'
         allow='encrypted-media'
         style={{

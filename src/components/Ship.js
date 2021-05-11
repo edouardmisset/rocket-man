@@ -4,14 +4,14 @@ import './Ship.css';
 function convertDegToRad(deg) {
   return (Math.PI * deg) / 180;
 }
+// Speed factor
 const speed = 10;
+
 function Ship({ ship, setShip }) {
   const { angle, position } = ship;
   const { x, y } = position;
 
   function moveShip(e) {
-    // Speed factor
-
     switch (e.key) {
       case 'ArrowLeft':
         setShip(ship => ({ ...ship, angle: ship.angle - 1 }));
