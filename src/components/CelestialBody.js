@@ -19,11 +19,11 @@ export default function CelestialBody(props) {
   const cBXMax = position.x + size;
   const cBYMin = position.y;
   const cBYMax = position.y + size;
-  const rocket = document.querySelector('.rocket');
-  const rocketHeight = rocket.offsetHeight;
-  const rocketWidth = rocket.offsetWidth;
 
   useEffect(() => {
+    const rocket = document.querySelector('.rocket');
+    const rocketHeight = rocket.offsetHeight;
+    const rocketWidth = rocket.offsetWidth;
     const shipX = ship.position.x + rocketWidth / 2;
     const shipY = ship.position.y + rocketHeight / 2;
     setHasRocketLanded(
@@ -36,8 +36,6 @@ export default function CelestialBody(props) {
     cBYMin,
     position.x,
     position.y,
-    rocketHeight,
-    rocketWidth,
     ship.position.x,
     ship.position.y,
     size,
