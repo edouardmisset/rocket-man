@@ -15,4 +15,5 @@
   color: hsla(36, 50%, 95%, 0.9);
   border-radius: 1em;
   padding: 1em;
+  z-index: 1;
 }
