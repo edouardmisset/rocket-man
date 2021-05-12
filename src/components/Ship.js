@@ -34,7 +34,6 @@ function Ship({ ship, setShip }) {
         }));
         break;
       default:
-        console.log('key pressed');
     }
   }
 
