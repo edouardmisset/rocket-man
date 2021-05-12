@@ -13,6 +13,7 @@ import saturnCartoon from './assets/saturne-cartoon.svg';
 import sunCartoon from './assets/soleil-cartoon.svg';
 import deathStarCartoon from './assets/etoile-de-la-mort-cartoon.svg';
 import eT from './assets/ET.svg';
+import Player from './components/Player';
 
 const particlesOptions = {
   particles: {
@@ -102,20 +103,7 @@ export default function App() {
         />
       ))}
       <Ship ship={ship} setShip={setShip} />
-      <iframe
-        title='Rocket Man'
-        src='https://open.spotify.com/embed/track/3gdewACMIVMEWVbyb8O9sY'
-        width='300'
-        height='80'
-        frameBorder='0'
-        allowtransparency='true'
-        allow='encrypted-media'
-        style={{
-          position: 'absolute',
-          bottom: 0,
-          right: 0,
-        }}
-      ></iframe>
+      <Player />
     </div>
   );
 }
