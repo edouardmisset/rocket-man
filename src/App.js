@@ -181,7 +181,8 @@ export default function App() {
       },
       meteorite: {
         name: 'Meteorite',
-        description: '',
+        description:
+          'A meteorite is a solid piece of debris from an object, such as a comet, asteroid, or meteoroid, that originates in outer space and survives its passage through the atmosphere to reach the surface of a planet or moon.',
         cartoonImage: meteoriteCartoon,
         realImage:
           'https://france3-regions.francetvinfo.fr/image/1QKKfcbwGUzhDoEYBcay5vf4oBU/930x620//filters:format(webp)/regions/2021/04/25/608524ec03987_photo_meteorite-5287824.jpeg',
