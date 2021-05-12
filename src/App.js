@@ -1,10 +1,12 @@
 import './App.css';
 import Particles from 'react-particles-js';
+import particlesOptions from './components/particlesOptions';
 import { useEffect, useState } from 'react';
 import CelestialBody from './components/CelestialBody';
 import InfosCelestial from './components/InfosCelestial';
 import Ship from './components/Ship';
 import axios from 'axios';
+import Player from './components/Player';
 
 // Import assests
 import earthCartoon from './assets/terre-cartoon.svg';
@@ -17,51 +19,6 @@ import saturnCartoon from './assets/saturne-cartoon.svg';
 import sunCartoon from './assets/soleil-cartoon.svg';
 import deathStarCartoon from './assets/etoile-de-la-mort-cartoon.svg';
 import meteoriteCartoon from './assets/meteor-cartoon.svg';
-
-const particlesOptions = {
-  particles: {
-    number: {
-      value: 400,
-      density: {
-        enable: true,
-        value_area: 3500,
-      },
-    },
-    line_linked: {
-      enable: true,
-      distance: 100,
-      opacity: 0.1,
-    },
-    move: {
-      direction: 'right',
-      speed: 0.2,
-    },
-    size: {
-      value: 1,
-    },
-    opacity: {
-      anim: {
-        enable: true,
-        speed: 1,
-        opacity_min: 0.05,
-      },
-    },
-  },
-  interactivity: {
-    events: {
-      onclick: {
-        enable: true,
-        mode: 'push',
-      },
-    },
-    modes: {
-      push: {
-        particles_nb: 1,
-      },
-    },
-  },
-  retina_detect: true,
-};
 
 export default function App() {
   const [ship, setShip] = useState({
@@ -242,20 +199,7 @@ export default function App() {
           />
         ))}
       <Ship ship={ship} setShip={setShip} />
-      <iframe
-        title='Rocket Man'
-        src='https://open.spotify.com/embed/track/3gdewACMIVMEWVbyb8O9sY'
-        width='300'
-        height='80'
-        frameborder='0'
-        allowtransparency='true'
-        allow='encrypted-media'
-        style={{
-          position: 'absolute',
-          bottom: 0,
-          right: 0,
-        }}
-      ></iframe>
+      <Player />
     </div>
   );
 }
