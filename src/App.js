@@ -47,6 +47,9 @@ export default function App() {
           y: 20,
         },
         size: 15,
+        density: 0,
+        diameter: 0,
+        gravity: 0,
       },
       mars: {
         name: 'Mars',
@@ -60,6 +63,9 @@ export default function App() {
           y: 80,
         },
         size: 13,
+        density: 0,
+        diameter: 0,
+        gravity: 0,
       },
       moon: {
         name: 'Moon',
@@ -73,6 +79,9 @@ export default function App() {
           y: 10,
         },
         size: 6,
+        density: 0,
+        diameter: 0,
+        gravity: 0,
       },
       deathStar: {
         name: 'Death Star',
@@ -86,6 +95,9 @@ export default function App() {
           y: 70,
         },
         size: 12,
+        density: Infinity,
+        diameter: 0,
+        gravity: 0,
       },
       sun: {
         name: 'Sun',
@@ -99,6 +111,9 @@ export default function App() {
           y: 35,
         },
         size: 30,
+        density: 0,
+        diameter: 0,
+        gravity: 0,
       },
       iss: {
         name: 'ISS',
@@ -112,6 +127,9 @@ export default function App() {
           y: 40,
         },
         size: 6,
+        density: 1,
+        diameter: 1,
+        gravity: 0,
       },
       galaxy: {
         name: 'Galaxy',
@@ -125,6 +143,9 @@ export default function App() {
           y: 85,
         },
         size: 10,
+        density: 0.1,
+        diameter: Infinity,
+        gravity: 0,
       },
       jupiter: {
         name: 'Jupiter',
@@ -138,6 +159,9 @@ export default function App() {
           y: 45,
         },
         size: 22,
+        density: 0,
+        diameter: 0,
+        gravity: 0,
       },
       saturn: {
         name: 'Saturn',
@@ -151,6 +175,9 @@ export default function App() {
           y: 10,
         },
         size: 30,
+        density: 0,
+        diameter: 0,
+        gravity: 0,
       },
       meteorite: {
         name: 'Meteorite',
@@ -163,6 +190,9 @@ export default function App() {
           y: 48,
         },
         size: 8,
+        density: 10,
+        diameter: 0.01,
+        gravity: 0,
       },
     });
   }, []);
@@ -170,21 +200,83 @@ export default function App() {
   useEffect(() => {
     axios
       .get('https://api.le-systeme-solaire.net/rest/bodies/')
-      .then(response =>
-        console.log(
-          response.data.bodies.filter(
-            planetName =>
-              planetName.englishName.includes('Moon') ||
-              planetName.englishName.includes('Mars') ||
-              planetName.englishName.includes('Earth') ||
-              planetName.englishName.includes('Jupiter') ||
-              planetName.englishName.includes('Sun')
-          )
-        )
-      );
+      .then(({ data }) => {
+        const bodies = data.bodies;
+
+        // Grab the planet object
+        const [moon] = bodies.filter(planetName =>
+          planetName.englishName.includes('Moon')
+        );
+        // Set CB info with the rest ...cBinfoList, planet : {...celestialBodyInfoList.planet}
+        setCelestialBodyInfoList(celestialBodyInfoList => ({
+          ...celestialBodyInfoList,
+          moon: {
+            ...celestialBodyInfoList.moon,
+            density: moon.density,
+            gravity: moon.gravity,
+            diameter: 2 * moon.meanRadius,
+          },
+        }));
+
+        const [mars] = bodies.filter(planetName =>
+          planetName.englishName.includes('Mars')
+        );
+        // Set CB info with the rest ...cBinfoList, planet : {...celestialBodyInfoList.planet}
+        setCelestialBodyInfoList(celestialBodyInfoList => ({
+          ...celestialBodyInfoList,
+          mars: {
+            ...celestialBodyInfoList.mars,
+            density: mars.density,
+            gravity: mars.gravity,
+            diameter: 2 * mars.meanRadius,
+          },
+        }));
+
+        const [earth] = bodies.filter(planetName =>
+          planetName.englishName.includes('Earth')
+        );
+        // Set CB info with the rest ...cBinfoList, planet : {...celestialBodyInfoList.planet}
+        setCelestialBodyInfoList(celestialBodyInfoList => ({
+          ...celestialBodyInfoList,
+          earth: {
+            ...celestialBodyInfoList.earth,
+            density: earth.density,
+            gravity: earth.gravity,
+            diameter: 2 * earth.meanRadius,
+          },
+        }));
+
+        const [jupiter] = bodies.filter(planetName =>
+          planetName.englishName.includes('Jupiter')
+        );
+        // Set CB info with the rest ...cBinfoList, planet : {...celestialBodyInfoList.planet}
+        setCelestialBodyInfoList(celestialBodyInfoList => ({
+          ...celestialBodyInfoList,
+          jupiter: {
+            ...celestialBodyInfoList.jupiter,
+            density: jupiter.density,
+            gravity: jupiter.gravity,
+            diameter: 2 * jupiter.meanRadius,
+          },
+        }));
+
+        const [sun] = bodies.filter(planetName =>
+          planetName.englishName.includes('Sun')
+        );
+        // Set CB info with the rest ...cBinfoList, planet : {...celestialBodyInfoList.planet}
+        setCelestialBodyInfoList(celestialBodyInfoList => ({
+          ...celestialBodyInfoList,
+          sun: {
+            ...celestialBodyInfoList.sun,
+            density: sun.density,
+            gravity: sun.gravity,
+            diameter: 2 * sun.meanRadius,
+          },
+        }));
+      });
   }, []);
 
-  if (celestialBodyInfoList) console.log();
+  // density, gravity, meanRadius, englishName, moons (moon)
 
   return (
     <div className='App'>
