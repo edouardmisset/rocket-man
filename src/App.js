@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import CelestialBody from './components/CelestialBody';
 import InfosCelestial from './components/InfosCelestial';
 import Ship from './components/Ship';
+import axios from 'axios';
 
 // Import assests
 import earthCartoon from './assets/terre-cartoon.svg';
@@ -80,10 +81,10 @@ export default function App() {
       earth: {
         name: 'Earth',
         description:
-          "The Moon is Earth's only natural satellite. At about one-quarter the diameter of Earth (comparable to the width of Australia),[13] it is the largest natural satellite in the Solar System relative to the size of its planet,[f] and the fifth largest satellite in the Solar System overall (larger than any dwarf planet).",
+          "Earth is the third planet from the Sun and the only astronomical object known to harbor life. About 29.2% of Earth's surface is land consisting of continents and islands. The remaining 70.8% is covered with water, mostly by oceans, seas and other salt-water bodies, but also by fresh-water bodies, which together constitute the hydrosphere. Earth's atmosphere consists mostly of nitrogen and oxygen.",
         cartoonImage: earthCartoon,
         realImage:
-          'https://images-assets.nasa.gov/image/PIA00123/PIA00123~small.jpg',
+          'https://upload.wikimedia.org/wikipedia/commons/d/d9/Earth_by_the_EPIC_Team_on_21_April_2018.png',
         position: {
           x: 10,
           y: 20,
@@ -95,9 +96,11 @@ export default function App() {
         description:
           'Mars is the fourth planet in increasing order of distance from the Sun and the second in increasing order of size and mass.',
         cartoonImage: marsCartoon,
+        realImage:
+          'https://images-assets.nasa.gov/image/PIA04591/PIA04591~orig.jpg',
         position: {
-          x: 20,
-          y: 45,
+          x: 10,
+          y: 80,
         },
         size: 13,
       },
@@ -107,10 +110,10 @@ export default function App() {
           "The Moon is Earth's only natural satellite. At about one-quarter the diameter of Earth (comparable to the width of Australia),[13] it is the largest natural satellite in the Solar System relative to the size of its planet,[f] and the fifth largest satellite in the Solar System overall (larger than any dwarf planet).",
         cartoonImage: moonCartoon,
         realImage:
-          'https://images-assets.nasa.gov/image/PIA00123/PIA00123~small.jpg',
+          'https://images-assets.nasa.gov/image/PIA00405/PIA00405~small.jpg',
         position: {
-          x: 15,
-          y: 25,
+          x: 20,
+          y: 10,
         },
         size: 6,
       },
@@ -119,6 +122,8 @@ export default function App() {
         description:
           'The Death Stars are two spherically shaped, small moon-sized movable sidereal space stations featured in the Star Wars saga.',
         cartoonImage: deathStarCartoon,
+        realImage:
+          'https://static.wikia.nocookie.net/starwars/images/8/87/Imperial_Might_RotE.png/revision/latest/scale-to-width-down/1000?cb=20200710034046',
         position: {
           x: 90,
           y: 70,
@@ -130,9 +135,11 @@ export default function App() {
         description:
           'The Sun is the star of the Solar System. In the astronomical classification, it is a yellow dwarf-type star with a mass of approximately 1.989 1 × 1030 kg, composed of hydrogen (75% of the mass or 92% of the volume) and helium (25% by mass or 8% by volume) 10.',
         cartoonImage: sunCartoon,
+        realImage:
+          'https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000790/GSFC_20171208_Archive_e000790~small.jpg',
         position: {
-          x: 60,
-          y: 10,
+          x: 30,
+          y: 35,
         },
         size: 30,
       },
@@ -141,9 +148,11 @@ export default function App() {
         description:
           'The International Space Station, or ISS, is a space station placed in low Earth orbit, permanently manned by an international crew dedicated to scientific research in the space environment. ',
         cartoonImage: issCartoon,
+        realImage:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/ISS-56_International_Space_Station_fly-around_%2805%29.jpg/1920px-ISS-56_International_Space_Station_fly-around_%2805%29.jpg',
         position: {
-          x: 18,
-          y: 29,
+          x: 5,
+          y: 40,
         },
         size: 6,
       },
@@ -152,8 +161,10 @@ export default function App() {
         description:
           'A galaxy is an assemblage of stars, gas, dust, void, and perhaps mostly dark matter, sometimes containing a supermassive black hole at its center. ',
         cartoonImage: galaxyCartoon,
+        realImage:
+          'https://images-assets.nasa.gov/image/PIA07828/PIA07828~small.jpg',
         position: {
-          x: 53,
+          x: 40,
           y: 85,
         },
         size: 10,
@@ -163,9 +174,11 @@ export default function App() {
         description:
           'Jupiter is a giant gas planet. It is the largest planet in the Solar System, larger and more massive than all the other planets combined, and the fifth planet by its distance from the Sun. ',
         cartoonImage: jupiterCartoon,
+        realImage:
+          'https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/jupapr3color-jd-170304.png?itok=H3AGeVPH',
         position: {
-          x: 45,
-          y: 35,
+          x: 60,
+          y: 45,
         },
         size: 22,
       },
@@ -174,9 +187,11 @@ export default function App() {
         description:
           'Saturn is the sixth planet in the Solar System in order of distance from the Sun, and the second largest in size and mass after Jupiter, which is like it a giant gas planet. ',
         cartoonImage: saturnCartoon,
+        realImage:
+          'https://images-assets.nasa.gov/image/PIA11141/PIA11141~small.jpg',
         position: {
-          x: 23,
-          y: 15,
+          x: 73,
+          y: 10,
         },
         size: 30,
       },
@@ -184,13 +199,32 @@ export default function App() {
         name: 'Meteorite',
         description: '',
         cartoonImage: meteoriteCartoon,
+        realImage:
+          'https://france3-regions.francetvinfo.fr/image/1QKKfcbwGUzhDoEYBcay5vf4oBU/930x620//filters:format(webp)/regions/2021/04/25/608524ec03987_photo_meteorite-5287824.jpeg',
         position: {
-          x: 45,
-          y: 45,
+          x: 90,
+          y: 48,
         },
         size: 8,
       },
     });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get('https://api.le-systeme-solaire.net/rest/bodies/')
+      .then(response =>
+        console.log(
+          response.data.bodies.filter(
+            planetName =>
+              planetName.englishName.includes('Moon') ||
+              planetName.englishName.includes('Mars') ||
+              planetName.englishName.includes('Earth') ||
+              planetName.englishName.includes('Jupiter') ||
+              planetName.englishName.includes('Sun')
+          )
+        )
+      );
   }, []);
 
   if (celestialBodyInfoList) console.log();

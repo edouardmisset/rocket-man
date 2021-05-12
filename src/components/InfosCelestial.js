@@ -55,8 +55,8 @@ function InfosCelestial() {
     },
     {
       id: 8,
-      name: "Asteroid",
-      url: "https://images-assets.nasa.gov/image/PIA00136/PIA00136~small.jpg",
+      name: "Meteorite",
+      url: "https://france3-regions.francetvinfo.fr/image/1QKKfcbwGUzhDoEYBcay5vf4oBU/930x620//filters:format(webp)/regions/2021/04/25/608524ec03987_photo_meteorite-5287824.jpeg",
     },
   ];
 
