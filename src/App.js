@@ -72,7 +72,7 @@ export default function App() {
           "The Moon is Earth's only natural satellite. At about one-quarter the diameter of Earth (comparable to the width of Australia),[13] it is the largest natural satellite in the Solar System relative to the size of its planet,[f] and the fifth largest satellite in the Solar System overall (larger than any dwarf planet).",
         cartoonImage: moonCartoon,
         realImage:
-          "https://images-assets.nasa.gov/image/PIA00405/PIA00405~small.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/1/10/Supermoon_Nov-14-2016-minneapolis.jpg",
         position: {
           x: 20,
           y: 10,
@@ -87,8 +87,7 @@ export default function App() {
         description:
           "The Death Stars are two spherically shaped, small moon-sized movable sidereal space stations featured in the Star Wars saga.",
         cartoonImage: deathStarCartoon,
-        realImage:
-          "https://static.wikia.nocookie.net/starwars/images/8/87/Imperial_Might_RotE.png/revision/latest/scale-to-width-down/1000?cb=20200710034046",
+        realImage: "https://i.imgur.com/9yeqp7s.png",
         position: {
           x: 90,
           y: 70,

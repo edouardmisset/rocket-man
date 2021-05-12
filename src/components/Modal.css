@@ -1,7 +1,8 @@
 .modale {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
+  top: 100px;
   /* Center on the page */
   left: 0;
   right: 0;

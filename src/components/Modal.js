@@ -12,8 +12,8 @@ const Modal = ({
   hasRocketLanded ? (
     <div className="modale">
       <h2>{name}</h2>
-      <h3>Description:</h3>
       <img src={realImage} alt="realImage" />
+      <h3>Description:</h3>
       <p>{description}</p>
       <p>Density : {density} g/cm3</p>
       <p>Gravity : {gravity} m/s2 </p>
