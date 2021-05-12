@@ -1,0 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,,800,900);
+
+.container {
+  margin: 0 auto;
+  font-family: 'Raleway', sans-serif;
+}
+
+.title {
+  font-weight: 800;
+  color: transparent;
+  font-size: 6em;
+  background: url('https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg')
+    repeat;
+  background-position: 40% 50%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: center;
+  letter-spacing: -0.5rem;
+}
