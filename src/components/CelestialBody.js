@@ -11,6 +11,9 @@ export default function CelestialBody(props) {
       description,
       position,
       size,
+      density,
+      diameter,
+      gravity,
     },
   } = props;
   const [hasRocketLanded, setHasRocketLanded] = useState(false);
@@ -53,7 +56,7 @@ export default function CelestialBody(props) {
       <img
         src={cartoonImage}
         alt={name}
-        style={{ maxHeight: size, maxWidth: size }}
+        style={{ maxHeight: `${size}px`, maxWidth: `${size}px` }}
         onClick={() => {
           setHasRocketLanded(!hasRocketLanded);
         }}
@@ -63,6 +66,9 @@ export default function CelestialBody(props) {
         description={description}
         name={name}
         realImage={realImage}
+        density={density}
+        diameter={diameter}
+        gravity={gravity}
       />
     </div>
   );
