@@ -1,10 +1,11 @@
 .modale {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   /* Center on the page */
   left: 0;
   right: 0;
+  top:20vh;
   margin-left: auto;
   margin-right: auto;
   width: 400px;

@@ -59,8 +59,8 @@ export default function App() {
         realImage:
           "https://www.vaisala.com/sites/default/files/styles/16_9_liftup_extra_large/public/images/LIFT-Mars%20the%20Red%20Planet-1600x900.jpg?itok=YXq-Cv1K",
         position: {
-          x: 100,
-          y: 800,
+          x: 190,
+          y: 682,
         },
         size: 130,
         density: 0,
@@ -91,13 +91,14 @@ export default function App() {
         realImage:
           "https://static.wikia.nocookie.net/starwars/images/8/87/Imperial_Might_RotE.png/revision/latest/scale-to-width-down/1000?cb=20200710034046",
         position: {
-          x: 900,
-          y: 700,
+          x: 1200,
+          y: 470,
         },
         size: 120,
-        density: Infinity,
-        diameter: 0,
-        gravity: 0,
+        density: 'null',
+        diameter: 160,
+        gravity: 'null',
+        
       },
       sun: {
         name: "Sun",
@@ -107,10 +108,10 @@ export default function App() {
         realImage:
           "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000790/GSFC_20171208_Archive_e000790~small.jpg",
         position: {
-          x: 300,
-          y: 350,
+          x: 700,
+          y: 200,
         },
-        size: 300,
+        size: 380,
         density: 0,
         diameter: 0,
         gravity: 0,
@@ -124,7 +125,7 @@ export default function App() {
           "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/ISS-56_International_Space_Station_fly-around_%2805%29.jpg/1920px-ISS-56_International_Space_Station_fly-around_%2805%29.jpg",
         position: {
           x: 50,
-          y: 400,
+          y: 150,
         },
         size: 60,
         density: 1,
@@ -139,8 +140,8 @@ export default function App() {
         realImage:
           "https://images-assets.nasa.gov/image/PIA07828/PIA07828~small.jpg",
         position: {
-          x: 400,
-          y: 850,
+          x: 650,
+          y: 550,
         },
         size: 100,
         density: 0.1,
@@ -155,8 +156,8 @@ export default function App() {
         realImage:
           "https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/jupapr3color-jd-170304.png?itok=H3AGeVPH",
         position: {
-          x: 460,
-          y: 545,
+          x: 1460,
+          y: 645,
         },
         size: 220,
         density: 0,
@@ -171,8 +172,8 @@ export default function App() {
         realImage:
           "https://images-assets.nasa.gov/image/PIA11141/PIA11141~small.jpg",
         position: {
-          x: 730,
-          y: 100,
+          x: 1330,
+          y: 62,
         },
         size: 300,
         density: 0,
@@ -186,8 +187,8 @@ export default function App() {
         realImage:
           "https://france3-regions.francetvinfo.fr/image/1QKKfcbwGUzhDoEYBcay5vf4oBU/930x620//filters:format(webp)/regions/2021/04/25/608524ec03987_photo_meteorite-5287824.jpeg",
         position: {
-          x: 900,
-          y: 480,
+          x: 1200,
+          y: 350,
         },
         size: 80,
         density: 10,
