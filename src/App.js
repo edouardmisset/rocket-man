@@ -42,10 +42,11 @@ export default function App() {
         realImage:
           "https://upload.wikimedia.org/wikipedia/commons/d/d9/Earth_by_the_EPIC_Team_on_21_April_2018.png",
         position: {
-          x: 10,
-          y: 20,
+          x: 100,
+          y: 220,
         },
-        size: 15,
+        size: 130,
+        
         density: 0,
         diameter: 0,
         gravity: 0,
@@ -58,10 +59,10 @@ export default function App() {
         realImage:
           "https://www.vaisala.com/sites/default/files/styles/16_9_liftup_extra_large/public/images/LIFT-Mars%20the%20Red%20Planet-1600x900.jpg?itok=YXq-Cv1K",
         position: {
-          x: 10,
-          y: 80,
+          x: 190,
+          y: 682,
         },
-        size: 13,
+        size: 130,
         density: 0,
         diameter: 0,
         gravity: 0,
@@ -74,10 +75,10 @@ export default function App() {
         realImage:
           "https://upload.wikimedia.org/wikipedia/commons/1/10/Supermoon_Nov-14-2016-minneapolis.jpg",
         position: {
-          x: 20,
-          y: 10,
+          x: 250,
+          y: 100,
         },
-        size: 6,
+        size: 60,
         density: 0,
         diameter: 0,
         gravity: 0,
@@ -89,13 +90,14 @@ export default function App() {
         cartoonImage: deathStarCartoon,
         realImage: "https://i.imgur.com/9yeqp7s.png",
         position: {
-          x: 90,
-          y: 70,
+          x: 1200,
+          y: 470,
         },
-        size: 12,
-        density: Infinity,
-        diameter: 0,
-        gravity: 0,
+        size: 120,
+        density: 'null',
+        diameter: 160,
+        gravity: 'null',
+        
       },
       sun: {
         name: "Sun",
@@ -105,10 +107,10 @@ export default function App() {
         realImage:
           "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000790/GSFC_20171208_Archive_e000790~small.jpg",
         position: {
-          x: 30,
-          y: 35,
+          x: 700,
+          y: 200,
         },
-        size: 30,
+        size: 380,
         density: 0,
         diameter: 0,
         gravity: 0,
@@ -121,10 +123,10 @@ export default function App() {
         realImage:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/ISS-56_International_Space_Station_fly-around_%2805%29.jpg/1920px-ISS-56_International_Space_Station_fly-around_%2805%29.jpg",
         position: {
-          x: 5,
-          y: 40,
+          x: 50,
+          y: 150,
         },
-        size: 6,
+        size: 60,
         density: 1,
         diameter: 1,
         gravity: 0,
@@ -137,10 +139,10 @@ export default function App() {
         realImage:
           "https://images-assets.nasa.gov/image/PIA07828/PIA07828~small.jpg",
         position: {
-          x: 40,
-          y: 85,
+          x: 650,
+          y: 550,
         },
-        size: 10,
+        size: 100,
         density: 0.1,
         diameter: Infinity,
         gravity: 0,
@@ -153,10 +155,10 @@ export default function App() {
         realImage:
           "https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/jupapr3color-jd-170304.png?itok=H3AGeVPH",
         position: {
-          x: 60,
-          y: 45,
+          x: 1460,
+          y: 645,
         },
-        size: 22,
+        size: 220,
         density: 0,
         diameter: 0,
         gravity: 0,
@@ -169,10 +171,10 @@ export default function App() {
         realImage:
           "https://images-assets.nasa.gov/image/PIA11141/PIA11141~small.jpg",
         position: {
-          x: 73,
-          y: 10,
+          x: 1330,
+          y: 62,
         },
-        size: 30,
+        size: 300,
         density: 0,
         diameter: 0,
         gravity: 0,
@@ -184,10 +186,10 @@ export default function App() {
         realImage:
           "https://france3-regions.francetvinfo.fr/image/1QKKfcbwGUzhDoEYBcay5vf4oBU/930x620//filters:format(webp)/regions/2021/04/25/608524ec03987_photo_meteorite-5287824.jpeg",
         position: {
-          x: 90,
-          y: 48,
+          x: 1200,
+          y: 350,
         },
-        size: 8,
+        size: 80,
         density: 10,
         diameter: 0.01,
         gravity: 0,
