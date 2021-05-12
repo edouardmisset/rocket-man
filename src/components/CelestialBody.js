@@ -46,14 +46,14 @@ export default function CelestialBody(props) {
     <div
       style={{
         position: 'absolute',
-        left: `${position.x}px`,
-        top: `${position.y}px`,
+        left: `${position.x}%`,
+        top: `${position.y}%`,
       }}
     >
       <img
         src={cartoonImage}
         alt={name}
-        style={{ maxHeight: size, maxWidth: size }}
+        style={{ maxHeight: `${size}vh`, maxWidth: `${size}vh` }}
         onClick={() => {
           setHasRocketLanded(!hasRocketLanded);
         }}
