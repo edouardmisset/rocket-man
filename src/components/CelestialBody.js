@@ -11,6 +11,9 @@ export default function CelestialBody(props) {
       description,
       position,
       size,
+      density,
+      diameter,
+      gravity,
     },
   } = props;
   const [hasRocketLanded, setHasRocketLanded] = useState(false);
@@ -63,6 +66,9 @@ export default function CelestialBody(props) {
         description={description}
         name={name}
         realImage={realImage}
+        density={density}
+        diameter={diameter}
+        gravity={gravity}
       />
     </div>
   );
