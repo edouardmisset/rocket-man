@@ -43,10 +43,10 @@ export default function App() {
         realImage:
           'https://upload.wikimedia.org/wikipedia/commons/d/d9/Earth_by_the_EPIC_Team_on_21_April_2018.png',
         position: {
-          x: 10,
-          y: 20,
+          x: 100,
+          y: 220,
         },
-        size: 15,
+        size: 130,
       },
       mars: {
         name: 'Mars',
@@ -56,10 +56,10 @@ export default function App() {
         realImage:
           'https://images-assets.nasa.gov/image/PIA04591/PIA04591~orig.jpg',
         position: {
-          x: 10,
-          y: 80,
+          x: 100,
+          y: 800,
         },
-        size: 13,
+        size: 130,
       },
       moon: {
         name: 'Moon',
@@ -69,10 +69,10 @@ export default function App() {
         realImage:
           'https://images-assets.nasa.gov/image/PIA00405/PIA00405~small.jpg',
         position: {
-          x: 20,
-          y: 10,
+          x: 250,
+          y: 100,
         },
-        size: 6,
+        size: 60,
       },
       deathStar: {
         name: 'Death Star',
@@ -82,10 +82,10 @@ export default function App() {
         realImage:
           'https://static.wikia.nocookie.net/starwars/images/8/87/Imperial_Might_RotE.png/revision/latest/scale-to-width-down/1000?cb=20200710034046',
         position: {
-          x: 90,
-          y: 70,
+          x: 900,
+          y: 700,
         },
-        size: 12,
+        size: 120,
       },
       sun: {
         name: 'Sun',
@@ -95,10 +95,10 @@ export default function App() {
         realImage:
           'https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000790/GSFC_20171208_Archive_e000790~small.jpg',
         position: {
-          x: 30,
-          y: 35,
+          x: 300,
+          y: 350,
         },
-        size: 30,
+        size: 300,
       },
       iss: {
         name: 'ISS',
@@ -108,10 +108,10 @@ export default function App() {
         realImage:
           'https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/ISS-56_International_Space_Station_fly-around_%2805%29.jpg/1920px-ISS-56_International_Space_Station_fly-around_%2805%29.jpg',
         position: {
-          x: 5,
-          y: 40,
+          x: 50,
+          y: 400,
         },
-        size: 6,
+        size: 600,
       },
       galaxy: {
         name: 'Galaxy',
@@ -121,10 +121,10 @@ export default function App() {
         realImage:
           'https://images-assets.nasa.gov/image/PIA07828/PIA07828~small.jpg',
         position: {
-          x: 40,
-          y: 85,
+          x: 400,
+          y: 850,
         },
-        size: 10,
+        size: 100,
       },
       jupiter: {
         name: 'Jupiter',
@@ -134,10 +134,10 @@ export default function App() {
         realImage:
           'https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/jupapr3color-jd-170304.png?itok=H3AGeVPH',
         position: {
-          x: 60,
-          y: 45,
+          x: 460,
+          y: 545,
         },
-        size: 22,
+        size: 220,
       },
       saturn: {
         name: 'Saturn',
@@ -147,10 +147,10 @@ export default function App() {
         realImage:
           'https://images-assets.nasa.gov/image/PIA11141/PIA11141~small.jpg',
         position: {
-          x: 73,
-          y: 10,
+          x: 730,
+          y: 100,
         },
-        size: 30,
+        size: 300,
       },
       meteorite: {
         name: 'Meteorite',
@@ -159,10 +159,10 @@ export default function App() {
         realImage:
           'https://france3-regions.francetvinfo.fr/image/1QKKfcbwGUzhDoEYBcay5vf4oBU/930x620//filters:format(webp)/regions/2021/04/25/608524ec03987_photo_meteorite-5287824.jpeg',
         position: {
-          x: 90,
-          y: 48,
+          x: 900,
+          y: 480,
         },
-        size: 8,
+        size: 80,
       },
     });
   }, []);
