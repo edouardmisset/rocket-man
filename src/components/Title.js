@@ -24,7 +24,7 @@ export default function Title() {
         className='title'
         style={{ backgroundPosition: `${track.x}% ${track.y}%` }}
       >
-        Team Rocket
+        Rocket Man
       </div>
     </div>
   );
